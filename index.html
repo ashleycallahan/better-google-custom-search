@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A Better Google Custom Search</title>
+        <script src="bgcs.js" type="text/javascript"></script>
+    </head>
+    <body>
+    	<h1>A Better Google Custom Search</h1>
+        <h2>Search Form</h2>
+        <p>This form goes on any page of your site that you'd like to have a search. It will point to a page with the search results form (below) on it.</p>
+        <form id="cse-search-form" method="get" action="http://www.google.com/cse" role="search">
+            <fieldset id="cse-search-fieldset1">
+                <legend>Choose which site to search</legend>
+                <ul>
+                    <!-- Update the value attributes of the input tags below to the URLs of the websites to be searched (do not include http:// or https:// or end with a forward slash). -->
+                    <li><input type="radio" name="q" id="cse-search-option1" value="site:www.iu.edu" checked="checked" />&nbsp;<label for="cse-search-option1">iu.edu</label></li>
+                    <li><input type="radio" name="q" id="cse-search-option2" value="site:www.iub.edu" />&nbsp;<label for="cse-search-option2">iub.edu</label></li> 
+                    <li><input type="radio" name="q" id="cse-search-option3" value="site:www.iupui.edu" />&nbsp;<label for="cse-search-option3">iupui.edu</label></li> 
+                </ul>
+            </fieldset>
+            <fieldset id="cse-search-fieldset2">
+                <label for="cse-search-keywords">Search keywords</label> 
+                <input type="text" name="as_q" id="cse-search-keywords" placeholder="Google&#8482; Custom Search" />
+                <input type="submit" name="cse-search-submit" id="cse-search-submit" value="Go" />
+                <!-- Update the value attribute of the input tag below with your Google Custom Search account ID. -->
+                <input type="hidden" name="cx" value="015259877170389514313:xf3fzbzv3xs" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="nojs" value="1" />
+            </fieldset>
+        </form>
+        <hr />
+        <h2>Search Results</h2>
+        <form id="cse-search-results-form" method="get" action="http://www.google.com/cse" target="cse-search-results-noscript">
+            <fieldset id="cse-search-results-fieldset1">
+                <legend>Choose which site to search</legend>
+                <ul>
+                    <!-- Update the value attributes of the input tags below to the URLs of the websites to be searched (do not include http:// or https:// or end with a forward slash). -->
+                    <li><input type="radio" name="q" id="cse-search-results-option1" value="site:www.iu.edu" checked="checked" />&nbsp;<label for="cse-search-results-option1">iu.edu</label></li>
+                    <li><input type="radio" name="q" id="cse-search-results-option2" value="site:www.iub.edu" />&nbsp;<label for="cse-search-results-option2">iub.edu</label></li> 
+                    <li><input type="radio" name="q" id="cse-search-results-option3" value="site:www.iupui.edu" />&nbsp;<label for="cse-search-results-option3">iupui.edu</label></li>
+                </ul>
+            </fieldset>
+            <fieldset id="cse-search-results-fieldset2">
+                <label for="cse-search-results-keywords">Search keywords</label> 
+                <input type="text" name="as_q" id="cse-search-results-keywords" placeholder="Google&#8482; Custom Search" />
+                <input type="submit" name="cse-search-results-submit" id="cse-search-results-submit" value="Go" />
+                <!-- Update the value attribute of the input tag below with your Google Custom Search account ID. -->
+                <input type="hidden" name="cx" value="015259877170389514313:xf3fzbzv3xs" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="nojs" value="1" />
+            </fieldset>
+        </form>
+        <noscript>
+        	<iframe id="cse-search-results-noscript" name="cse-search-results-noscript"></iframe>
+        </noscript>
+        <div id="gcse-searchbox"></div>
+    </body>
+</html>
